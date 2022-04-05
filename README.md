@@ -1,4 +1,4 @@
-# :headphones: TrybeWallet
+# :purse: TrybeWallet :moneybag:
 
 ## :page_with_curl: About
 
