@@ -1,3 +1,75 @@
 .Login {
-  border: 1px solid black;
+  align-items: center;
+  background-color: #b3e5fc;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+
+.Login form {
+  background-color: white;
+  border: 1px solid #0289d134;
+  border-radius: 1rem;
+  box-shadow: 0 5px 8px #0289d134;
+  display: flex;
+  flex-flow: column nowrap;
+  max-width: 500px;
+  padding: 2rem;
+}
+
+.Login form header {
+  color: #0288d1;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.Login form header img {
+  margin-bottom: 1rem;
+  width: 200px;
+}
+
+.Login-input-container {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.Login-input-container input {
+  background-color: #0289d10e;
+  border: 1px solid #0289d134;
+  border-radius: 0.2rem;
+  box-shadow: 0 3px 3px #0289d134;
+  color: #0288d1;
+  flex-grow: 2;
+  font-size: 1rem;
+  padding: 0.7rem 0.7rem 0.7rem 2rem;
+}
+
+.Login-input-container span {
+  align-items: center;
+  color: #0288d1;
+  display: flex;
+  justify-content: center;
+  left: 0.5rem;
+  opacity: 0.6;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.Login form button {
+  background-color: #03a9f4;
+  border-radius: 0.2rem;
+  color: white;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+  padding: 0.7rem;
+}
+
+.Login form button:disabled {
+  opacity: 0.5;
 }

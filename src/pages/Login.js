@@ -1,8 +1,10 @@
-import React from 'react';
 import PropTypes from 'prop-types';
+import React from 'react';
+import { FaLock, FaUserAlt } from 'react-icons/fa';
 import { connect } from 'react-redux';
 import { userLogin } from '../actions';
 import './Login.css';
+import logo from '../assets/logo.png';
 
 class Login extends React.Component {
   constructor() {
@@ -44,32 +46,47 @@ class Login extends React.Component {
     const { email, password, disabled } = this.state;
 
     return (
-      <form className="Login">
-        <header>
-          <h1>Login</h1>
-        </header>
-        <input
-          data-testid="email-input"
-          type="text"
-          name="email"
-          value={ email }
-          onChange={ this.handleInputChange }
-        />
-        <input
-          data-testid="password-input"
-          type="password"
-          name="password"
-          value={ password }
-          onChange={ this.handleInputChange }
-        />
-        <button
-          type="button"
-          disabled={ disabled }
-          onClick={ this.handleSubmit }
-        >
-          Entrar
-        </button>
-      </form>
+      <div className="Login">
+        <form>
+          <header>
+            <img src={ logo } alt="TrybeWallet logo" />
+            <p>Sign in</p>
+          </header>
+          <div className="Login-input-container">
+            <input
+              data-testid="email-input"
+              type="text"
+              name="email"
+              value={ email }
+              onChange={ this.handleInputChange }
+              placeholder="Username"
+            />
+            <span>
+              <FaUserAlt />
+            </span>
+          </div>
+          <div className="Login-input-container">
+            <input
+              data-testid="password-input"
+              type="password"
+              name="password"
+              value={ password }
+              onChange={ this.handleInputChange }
+              placeholder="Password"
+            />
+            <span>
+              <FaLock />
+            </span>
+          </div>
+          <button
+            type="button"
+            disabled={ disabled }
+            onClick={ this.handleSubmit }
+          >
+            LOGIN
+          </button>
+        </form>
+      </div>
     );
   }
 }
