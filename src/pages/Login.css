@@ -1,6 +1,6 @@
 .Login {
   align-items: center;
-  background-color: #b3e5fc;
+  background-color: var(--light-primary-color);
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -42,7 +42,7 @@
   border: 1px solid #0289d134;
   border-radius: 0.2rem;
   box-shadow: 0 3px 3px #0289d134;
-  color: #0288d1;
+  color: var(--dark-primary-color);
   flex-grow: 2;
   font-size: 1rem;
   padding: 0.7rem 0.7rem 0.7rem 2rem;
@@ -50,7 +50,7 @@
 
 .Login-input-container span {
   align-items: center;
-  color: #0288d1;
+  color: var(--dark-primary-color);
   display: flex;
   justify-content: center;
   left: 0.5rem;
@@ -61,7 +61,7 @@
 }
 
 .Login form button {
-  background-color: #03a9f4;
+  background-color: var(--primary-color);
   border-radius: 0.2rem;
   color: white;
   cursor: pointer;
