@@ -15,11 +15,13 @@ class Login extends React.Component {
       email: '',
       password: '',
       disabled: true,
+      focused: '',
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
     this.disableButton = this.disableButton.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleFocus = this.handleFocus.bind(this);
   }
 
   handleInputChange({ target }) {
@@ -43,8 +45,12 @@ class Login extends React.Component {
     history.push('/carteira');
   }
 
+  handleFocus(name) {
+    this.setState({ focused: name });
+  }
+
   render() {
-    const { email, password, disabled } = this.state;
+    const { email, password, disabled, focused } = this.state;
 
     return (
       <div className="Login">
@@ -66,8 +72,10 @@ class Login extends React.Component {
               value={ email }
               onChange={ this.handleInputChange }
               placeholder="Username"
+              onFocus={ () => this.handleFocus('email') }
+              onBlur={ () => this.handleFocus('') }
             />
-            <span>
+            <span className={ focused === 'email' ? 'icon-focus' : 'icon-blur' }>
               <FaUserAlt />
             </span>
           </div>
@@ -79,8 +87,10 @@ class Login extends React.Component {
               value={ password }
               onChange={ this.handleInputChange }
               placeholder="Password"
+              onFocus={ () => this.handleFocus('password') }
+              onBlur={ () => this.handleFocus('') }
             />
-            <span>
+            <span className={ focused === 'password' ? 'icon-focus' : 'icon-blur' }>
               <FaLock />
             </span>
           </div>

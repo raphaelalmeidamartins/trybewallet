@@ -52,7 +52,7 @@
   color: var(--text-icons);
   flex-grow: 2;
   font-size: 1rem;
-  padding: 0.7rem 0.7rem 0.7rem 2rem;
+  padding: 0.7rem 0.7rem 0.7rem 2.5rem;
   width: 100%;
 }
 
@@ -61,11 +61,22 @@
   color: var(--text-icons);
   display: flex;
   justify-content: center;
-  left: 0.5rem;
-  opacity: 0.6;
+  left: 0.8rem;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.icon-focus {
+  opacity: 1;
+}
+
+.icon-blur {
+  opacity: 0.3;
+}
+
+.Login-input-container input:focus {
+  opacity: 1;
 }
 
 .Login form button {
