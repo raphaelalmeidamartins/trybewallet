@@ -83,32 +83,14 @@
 
 @media screen and ( max-width : 500px ) {
 
+  .Login {
+    background: var(--primary-color);
+  }
+
   .Login form {
     background-color: transparent;
     border: 0;
     box-shadow: none;
-  }
-
-  .Login form header {
-    color: var(--primary-color);
-    text-align: center;
-  }
-
-  .Login-input-container input {
-    background-color: var(--primary-color);
-  }
-
-  .Login-logo {
-    display: none;
-  }
-
-  .Login-logo-inverted {
-    display: inline-block;
-  }
-
-  .Login form button {
-    background-color: var(--accent-color);
-    color: var(--text-icons);
   }
 }
 
