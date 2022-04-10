@@ -11,6 +11,7 @@
     "@testing-library/user-event": "7.2.1",
     "bootstrap": "4.5.2",
     "bulma": "^0.9.3",
+    "crypto-js": "^4.1.1",
     "postcss-flexbugs-fixes": "^5.0.2",
     "postcss-normalize": "^10.0.1",
     "postcss-preset-env": "^7.4.3",

@@ -13,15 +13,15 @@ class ExpensesTable extends Component {
       <table className="ExpensesTable table">
         <thead>
           <tr>
-            <th>Descrição</th>
+            <th>Description</th>
             <th>Tag</th>
-            <th>Método de pagamento</th>
-            <th>Valor</th>
-            <th>Moeda</th>
-            <th>Câmbio utilizado</th>
-            <th>Valor convertido</th>
-            <th>Moeda de conversão</th>
-            <th>Editar/Excluir</th>
+            <th>Payment method</th>
+            <th>Value</th>
+            <th>Currency</th>
+            <th>Exchange rate</th>
+            <th>Converted value</th>
+            <th>Conversion currency</th>
+            <th>Edit</th>
           </tr>
         </thead>
         <tbody>
@@ -60,14 +60,14 @@ class ExpensesTable extends Component {
                         tag,
                       }) }
                     >
-                      Editar
+                      Edit
                     </button>
                     <button
                       type="button"
                       data-testid="delete-btn"
                       onClick={ () => handleDeleteExpense(index) }
                     >
-                      Excluir
+                      Delete
                     </button>
                   </td>
                 </tr>
