@@ -3,8 +3,9 @@ import React from 'react';
 import { FaLock, FaUserAlt } from 'react-icons/fa';
 import { connect } from 'react-redux';
 import { userLogin } from '../actions';
+import logoInverted from '../assets/trybe-wallet-logo-inverted.svg';
+import logo from '../assets/trybe-wallet-logo.svg';
 import './Login.css';
-import logo from '../assets/logo.png';
 
 class Login extends React.Component {
   constructor() {
@@ -49,7 +50,12 @@ class Login extends React.Component {
       <div className="Login">
         <form>
           <header>
-            <img src={ logo } alt="TrybeWallet logo" />
+            <img className="Login-logo" src={ logo } alt="TrybeWallet logo" />
+            <img
+              className="Login-logo-inverted"
+              src={ logoInverted }
+              alt="TrybeWallet logo"
+            />
             <p>Sign in</p>
           </header>
           <div className="Login-input-container">
@@ -78,11 +84,7 @@ class Login extends React.Component {
               <FaLock />
             </span>
           </div>
-          <button
-            type="button"
-            disabled={ disabled }
-            onClick={ this.handleSubmit }
-          >
+          <button type="button" disabled={ disabled } onClick={ this.handleSubmit }>
             LOGIN
           </button>
         </form>

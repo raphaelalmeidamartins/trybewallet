@@ -8,14 +8,18 @@
 }
 
 :root {
-  --dark-primary-color: #0288D1;
-  --light-primary-color: #B3E5FC;
-  --primary-color: #03A9F4;
-  --text-icons: #FFFFFF;
-  --accent-color: #4CAF50;
+  --input-background: #0289d10e;
+  --text-icons: black;
+  --primary-color: #ffffff;
+  --secondary-color: #1988FF;
+  --dark-secondary-color: #004C9E;
+  --accent-color: #EB9500;
   --primary-text: #212121;
   --secondary-text: #757575;
-  --divider-color: #BDBDBD;
+  --divider-color: #0289d134;
+
+  --primary-radius: 0.5rem;
+  --secondary-radius: 1rem;
 }
 
 body {

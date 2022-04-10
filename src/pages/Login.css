@@ -1,6 +1,8 @@
 .Login {
   align-items: center;
-  background-color: var(--light-primary-color);
+
+  /* stylelint-disable-next-line max-line-length */
+  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--dark-secondary-color) 100%);
   display: flex;
   height: 100vh;
   justify-content: center;
@@ -8,26 +10,31 @@
 }
 
 .Login form {
-  background-color: white;
-  border: 1px solid #0289d134;
-  border-radius: 1rem;
-  box-shadow: 0 5px 8px #0289d134;
+  background-color: var(--primary-color);
+  border: 1px solid var(--divider-color);
+  border-radius: var(--secondary-radius);
+  box-shadow: 0 5px 8px var(--divider-color);
   display: flex;
   flex-flow: column nowrap;
   max-width: 500px;
   padding: 2rem;
+  transition: 200ms;
 }
 
 .Login form header {
-  color: #0288d1;
+  color: var(--text-icons);
   font-size: 1.5rem;
   margin: 1rem;
   text-align: center;
 }
 
-.Login form header img {
+.Login-logo , .Login-logo-inverted {
   margin-bottom: 1rem;
   width: 200px;
+}
+
+.Login-logo-inverted {
+  display: none;
 }
 
 .Login-input-container {
@@ -38,19 +45,20 @@
 }
 
 .Login-input-container input {
-  background-color: #0289d10e;
-  border: 1px solid #0289d134;
-  border-radius: 0.2rem;
-  box-shadow: 0 3px 3px #0289d134;
-  color: var(--dark-primary-color);
+  background-color: var(--input-background);
+  border: 1px solid var(--divider-color);
+  border-radius: var(--primary-radius);
+  box-shadow: 0 3px 3px var(--divider-color);
+  color: var(--text-icons);
   flex-grow: 2;
   font-size: 1rem;
   padding: 0.7rem 0.7rem 0.7rem 2rem;
+  width: 100%;
 }
 
 .Login-input-container span {
   align-items: center;
-  color: var(--dark-primary-color);
+  color: var(--text-icons);
   display: flex;
   justify-content: center;
   left: 0.5rem;
@@ -61,15 +69,52 @@
 }
 
 .Login form button {
-  background-color: var(--primary-color);
-  border-radius: 0.2rem;
+  background-color: var(--dark-secondary-color);
+  border-radius: var(--primary-radius);
   color: white;
   cursor: pointer;
   font-size: 1rem;
-  margin-top: 1rem;
   padding: 0.7rem;
 }
 
 .Login form button:disabled {
   opacity: 0.5;
+}
+
+@media screen and ( max-width : 500px ) {
+
+  .Login form {
+    background-color: transparent;
+    border: 0;
+    box-shadow: none;
+  }
+
+  .Login form header {
+    color: var(--primary-color);
+    text-align: center;
+  }
+
+  .Login-input-container input {
+    background-color: var(--primary-color);
+  }
+
+  .Login-logo {
+    display: none;
+  }
+
+  .Login-logo-inverted {
+    display: inline-block;
+  }
+
+  .Login form button {
+    background-color: var(--accent-color);
+    color: var(--text-icons);
+  }
+}
+
+@media screen and ( max-width : 340px ) {
+
+  .Login form {
+    width: 95%;
+  }
 }

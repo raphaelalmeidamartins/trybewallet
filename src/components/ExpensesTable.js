@@ -3,13 +3,14 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { deleteExpense, editExpense, updateTotal } from '../actions';
 import './ExpensesTable.css';
+import 'bulma/css/bulma.min.css';
 
 class ExpensesTable extends Component {
   render() {
     const { expenses, handleDeleteExpense, handleEditExpense } = this.props;
 
     return (
-      <table className="ExpensesTable">
+      <table className="ExpensesTable table">
         <thead>
           <tr>
             <th>Descrição</th>
