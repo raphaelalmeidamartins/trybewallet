@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { FaLock, FaUserAlt } from 'react-icons/fa';
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom';
 import { userLogin } from '../actions';
 import logo from '../assets/trybe-wallet-logo-converted.svg';
 import './Login.css';
@@ -15,6 +16,7 @@ class Login extends React.Component {
       password: '',
       disabled: true,
       focused: '',
+      redirect: false,
     };
 
     this.handleInputChange = this.handleInputChange.bind(this);
@@ -39,9 +41,10 @@ class Login extends React.Component {
   }
 
   handleSubmit() {
-    const { submitLogin, history } = this.props;
-    submitLogin(this.state);
-    history.push('/carteira');
+    const { submitLogin } = this.props;
+    const { email, password } = this.state;
+    submitLogin({ email, password });
+    this.setState({ redirect: true });
   }
 
   handleFocus(name) {
@@ -49,49 +52,52 @@ class Login extends React.Component {
   }
 
   render() {
-    const { email, password, disabled, focused } = this.state;
+    const { email, password, disabled, focused, redirect } = this.state;
 
     return (
       <div className="Login">
-        <form>
-          <header>
-            <img className="Login-logo" src={ logo } alt="TrybeWallet logo" />
-            <p>Sign in</p>
-          </header>
-          <div className="Login-input-container">
-            <input
-              data-testid="email-input"
-              type="text"
-              name="email"
-              value={ email }
-              onChange={ this.handleInputChange }
-              placeholder="Username"
-              onFocus={ () => this.handleFocus('email') }
-              onBlur={ () => this.handleFocus('') }
-            />
-            <span className={ focused === 'email' ? 'icon-focus' : 'icon-blur' }>
-              <FaUserAlt />
-            </span>
-          </div>
-          <div className="Login-input-container">
-            <input
-              data-testid="password-input"
-              type="password"
-              name="password"
-              value={ password }
-              onChange={ this.handleInputChange }
-              placeholder="Password"
-              onFocus={ () => this.handleFocus('password') }
-              onBlur={ () => this.handleFocus('') }
-            />
-            <span className={ focused === 'password' ? 'icon-focus' : 'icon-blur' }>
-              <FaLock />
-            </span>
-          </div>
-          <button type="button" disabled={ disabled } onClick={ this.handleSubmit }>
-            LOGIN
-          </button>
-        </form>
+        { redirect && <Redirect to="/wallet" /> }
+        { !redirect && (
+          <form>
+            <header>
+              <img className="Login-logo" src={ logo } alt="TrybeWallet logo" />
+              <p>Sign in</p>
+            </header>
+            <div className="Login-input-container">
+              <input
+                data-testid="email-input"
+                type="text"
+                name="email"
+                value={ email }
+                onChange={ this.handleInputChange }
+                placeholder="Username"
+                onFocus={ () => this.handleFocus('email') }
+                onBlur={ () => this.handleFocus('') }
+              />
+              <span className={ focused === 'email' ? 'icon-focus' : 'icon-blur' }>
+                <FaUserAlt />
+              </span>
+            </div>
+            <div className="Login-input-container">
+              <input
+                data-testid="password-input"
+                type="password"
+                name="password"
+                value={ password }
+                onChange={ this.handleInputChange }
+                placeholder="Password"
+                onFocus={ () => this.handleFocus('password') }
+                onBlur={ () => this.handleFocus('') }
+              />
+              <span className={ focused === 'password' ? 'icon-focus' : 'icon-blur' }>
+                <FaLock />
+              </span>
+            </div>
+            <button type="button" disabled={ disabled } onClick={ this.handleSubmit }>
+              LOGIN
+            </button>
+          </form>
+        ) }
       </div>
     );
   }
@@ -103,9 +109,6 @@ const mapDispatchToProps = (dispatch) => ({
 
 Login.propTypes = {
   submitLogin: PropTypes.func.isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
 };
 
 export default connect(null, mapDispatchToProps)(Login);
