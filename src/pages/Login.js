@@ -3,8 +3,7 @@ import React from 'react';
 import { FaLock, FaUserAlt } from 'react-icons/fa';
 import { connect } from 'react-redux';
 import { userLogin } from '../actions';
-import logoInverted from '../assets/trybe-wallet-logo-inverted.svg';
-import logo from '../assets/trybe-wallet-logo.svg';
+import logo from '../assets/trybe-wallet-logo-converted.svg';
 import './Login.css';
 
 class Login extends React.Component {
@@ -57,11 +56,6 @@ class Login extends React.Component {
         <form>
           <header>
             <img className="Login-logo" src={ logo } alt="TrybeWallet logo" />
-            <img
-              className="Login-logo-inverted"
-              src={ logoInverted }
-              alt="TrybeWallet logo"
-            />
             <p>Sign in</p>
           </header>
           <div className="Login-input-container">
