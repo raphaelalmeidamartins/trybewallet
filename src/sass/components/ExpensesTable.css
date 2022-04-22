@@ -1,1 +1,5 @@
-/* No CSS *//*# sourceMappingURL=ExpensesTable.css.map */
+.ExpensesTable button {
+  margin-bottom: 0.5rem !important;
+  width: 100%;
+}
+/*# sourceMappingURL=ExpensesTable.css.map */

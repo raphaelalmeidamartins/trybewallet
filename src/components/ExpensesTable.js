@@ -47,8 +47,9 @@ class ExpensesTable extends Component {
                     {(Number(exchangeRates[currency].ask) * value).toFixed(2)}
                   </td>
                   <td>Real</td>
-                  <td>
+                  <td className="Button-container">
                     <button
+                      className="button is-warning is-small"
                       type="button"
                       data-testid="edit-btn"
                       onClick={ () => handleEditExpense({
@@ -63,6 +64,7 @@ class ExpensesTable extends Component {
                       Edit
                     </button>
                     <button
+                      className="button is-danger is-small"
                       type="button"
                       data-testid="delete-btn"
                       onClick={ () => handleDeleteExpense(index) }
