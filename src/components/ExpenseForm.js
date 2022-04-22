@@ -6,7 +6,8 @@ import {
   fetchExchangeRates,
   updateCurrentExpense,
   updateTotal,
-} from '../actions';
+} from '../redux/actions';
+import '../sass/components/ExpenseForm.css';
 
 const Alimentacao = 'Alimentação';
 

@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
-import { fetchCurriencies, updateTotal } from '../actions';
 import ExpenseForm from '../components/ExpenseForm';
 import ExpensesTable from '../components/ExpensesTable';
 import Header from '../components/Header';
-import './Wallet.css';
+import { fetchCurriencies, updateTotal } from '../redux/actions';
+import '../sass/pages/Wallet.css';
 
 class Wallet extends React.Component {
   componentDidMount() {

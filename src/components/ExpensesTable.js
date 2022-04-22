@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { deleteExpense, editExpense, updateTotal } from '../actions';
-import './ExpensesTable.css';
+import { deleteExpense, editExpense, updateTotal } from '../redux/actions';
+import '../sass/components/ExpensesTable.css';
 import 'bulma/css/bulma.min.css';
 
 class ExpensesTable extends Component {
