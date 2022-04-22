@@ -51,7 +51,7 @@ class ExpenseForm extends Component {
                 className="input"
                 id="value-input"
                 data-testid="value-input"
-                type="text"
+                type="number"
                 name="value"
                 value={ value }
                 onChange={ handleInputChange }
@@ -140,6 +140,7 @@ class ExpenseForm extends Component {
             className="button is-primary"
             type="button"
             onClick={ this.handleSubmit }
+            disabled={ !value || !description }
           >
             {`${id !== null ? 'Editar' : 'Adicionar'} despesa`}
           </button>
@@ -159,7 +160,9 @@ const mapDispatchToProps = (dispatch) => ({
   recordExpense: (state, index) => dispatch(addExpense(state, index)),
   requestExchangeRatesFromAPI: (index) => dispatch(fetchExchangeRates(index)),
   handleInputChange: ({ target }) => {
-    dispatch(updateCurrentExpense(target.name, target.value));
+    let value = target.name === 'value' ? Number(target.value) : target.value;
+    value = Number.isNaN(value) ? '' : value;
+    dispatch(updateCurrentExpense(target.name, value));
   },
   updateTotalExpenses: () => dispatch(updateTotal()),
 });
