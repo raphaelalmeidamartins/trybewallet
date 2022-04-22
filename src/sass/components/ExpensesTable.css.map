@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,MAAM,EAAE,eAAe;CACxB",
+    "sources": [
+        "ExpensesTable.scss"
+    ],
+    "names": [],
+    "file": "ExpensesTable.css"
+}

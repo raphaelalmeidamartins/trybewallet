@@ -1,87 +1,49 @@
 .Login {
-  align-items: center;
-
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* stylelint-disable-next-line max-line-length */
-  background: linear-gradient(180deg, var(--secondary-color) 0%, var(--dark-secondary-color) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(#1988ff), to(#004c9e));
+  background: linear-gradient(180deg, #1988ff 0%, #004c9e 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   height: 100vh;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100vw;
 }
 
 .Login form {
-  background-color: var(--primary-color);
-  border: 1px solid var(--divider-color);
-  border-radius: var(--secondary-radius);
-  box-shadow: 0 5px 8px var(--divider-color);
+  background-color: #ffffff;
+  border: 1px solid #0289d134;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0 5px 8px #0289d134;
+          box-shadow: 0 5px 8px #0289d134;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-flow: column nowrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   max-width: 500px;
   padding: 2rem;
+  -webkit-transition: 200ms;
   transition: 200ms;
 }
 
 .Login form header {
-  color: var(--text-icons);
+  color: black;
   font-size: 1.5rem;
   margin: 1rem;
   text-align: center;
 }
 
-.Login-logo , .Login-logo-inverted {
-  margin-bottom: 1rem;
-  width: 200px;
-}
-
-.Login-logo-inverted {
-  display: none;
-}
-
-.Login-input-container {
-  display: flex;
-  margin-bottom: 1rem;
-  position: relative;
-  width: 100%;
-}
-
-.Login-input-container input {
-  background-color: var(--input-background);
-  border: 1px solid var(--divider-color);
-  border-radius: var(--primary-radius);
-  box-shadow: 0 3px 3px var(--divider-color);
-  color: var(--text-icons);
-  flex-grow: 2;
-  font-size: 1rem;
-  padding: 0.7rem 0.7rem 0.7rem 2.5rem;
-  width: 100%;
-}
-
-.Login-input-container span {
-  align-items: center;
-  color: var(--text-icons);
-  display: flex;
-  justify-content: center;
-  left: 0.8rem;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.icon-focus {
-  opacity: 1;
-}
-
-.icon-blur {
-  opacity: 0.3;
-}
-
-.Login-input-container input:focus {
-  opacity: 1;
-}
-
 .Login form button {
-  background-color: var(--dark-secondary-color);
-  border-radius: var(--primary-radius);
+  background-color: #004c9e;
+  border-radius: 0.5rem;
   color: white;
   cursor: pointer;
   font-size: 1rem;
@@ -92,22 +54,85 @@
   opacity: 0.5;
 }
 
-@media screen and ( max-width : 500px ) {
+.Login-logo,
+.Login-logo-inverted {
+  margin-bottom: 1rem;
+  width: 200px;
+}
 
+.Login-logo-inverted {
+  display: none;
+}
+
+.Login-input-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  width: 100%;
+}
+
+.Login-input-container input {
+  background-color: #0289d10e;
+  border: 1px solid #0289d134;
+  border-radius: 0.5rem;
+  -webkit-box-shadow: 0 3px 3px #0289d134;
+          box-shadow: 0 3px 3px #0289d134;
+  color: black;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  font-size: 1rem;
+  padding: 0.7rem 0.7rem 0.7rem 2.5rem;
+  width: 100%;
+}
+
+.Login-input-container input:focus {
+  opacity: 1;
+}
+
+.Login-input-container span {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 0.8rem;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.icon-focus {
+  opacity: 1;
+}
+
+.icon-blur {
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 500px) {
   .Login {
-    background: var(--primary-color);
+    background: #ffffff;
   }
-
   .Login form {
     background-color: transparent;
     border: 0;
-    box-shadow: none;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
 }
 
-@media screen and ( max-width : 340px ) {
-
+@media screen and (max-width: 340px) {
   .Login form {
     width: 95%;
   }
 }
+/*# sourceMappingURL=Login.css.map */

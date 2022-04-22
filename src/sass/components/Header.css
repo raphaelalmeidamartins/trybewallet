@@ -1,7 +1,12 @@
 .Header {
-  background-color: var(--primary-color);
+  background-color: #ffffff;
   border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 1rem;
 }
+/*# sourceMappingURL=Header.css.map */

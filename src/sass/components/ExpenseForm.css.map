@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,MAAM,EAAE,eAAe;CACxB",
+    "sources": [
+        "ExpenseForm.scss"
+    ],
+    "names": [],
+    "file": "ExpenseForm.css"
+}

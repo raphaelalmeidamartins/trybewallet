@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAEA,AAAA,OAAO,CAAC;EACN,gBAAgB,ECDF,OAAO;EDErB,MAAM,EAAE,eAAe;EACvB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,aAAa;EAC9B,OAAO,EAAE,IAAI;CACd",
+    "sources": [
+        "Header.scss",
+        "../abstracts/_colors.scss"
+    ],
+    "names": [],
+    "file": "Header.css"
+}
