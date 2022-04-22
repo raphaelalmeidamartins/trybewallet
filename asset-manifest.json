@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/trybewallet/static/css/main.d6b34564.css",
+    "main.js": "/trybewallet/static/js/main.fcdbebab.js",
+    "static/media/trybe-wallet-logo-converted.svg": "/trybewallet/static/media/trybe-wallet-logo-converted.4b98423400052f59438e91a4cfe81fcf.svg",
+    "index.html": "/trybewallet/index.html",
+    "main.d6b34564.css.map": "/trybewallet/static/css/main.d6b34564.css.map",
+    "main.fcdbebab.js.map": "/trybewallet/static/js/main.fcdbebab.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d6b34564.css",
+    "static/js/main.fcdbebab.js"
+  ]
+}
