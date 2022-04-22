@@ -1,3 +1,43 @@
 .ExpenseForm {
-  border: 1px solid black;
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100vw;
+
+  .label-currencies {
+    margin-left: 1rem;
+  }
+
+  .control {
+    width: 100%;
+    
+    div, select, input {
+      width: 100%;
+    }
+  }
+
+  .is-grouped {
+    label {
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .ExpenseForm {
+    align-items: flex-end;
+    flex-flow: row nowrap;
+    width: fit-content;
+
+    .label {
+      margin-bottom: 0 !important;
+    }
+
+    .field {
+      margin-bottom: 0 !important;
+
+      &:not(:last-child) {
+        margin-right: 1rem;
+      }
+    }
+  }
 }

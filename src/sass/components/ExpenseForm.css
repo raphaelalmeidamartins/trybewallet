@@ -1,4 +1,51 @@
 .ExpenseForm {
-  border: 1px solid black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+  width: 100vw;
+}
+
+.ExpenseForm .label-currencies {
+  margin-left: 1rem;
+}
+
+.ExpenseForm .control {
+  width: 100%;
+}
+
+.ExpenseForm .control div, .ExpenseForm .control select, .ExpenseForm .control input {
+  width: 100%;
+}
+
+.ExpenseForm .is-grouped label {
+  width: 100%;
+}
+
+@media screen and (min-width: 1000px) {
+  .ExpenseForm {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+  .ExpenseForm .label {
+    margin-bottom: 0 !important;
+  }
+  .ExpenseForm .field {
+    margin-bottom: 0 !important;
+  }
+  .ExpenseForm .field:not(:last-child) {
+    margin-right: 1rem;
+  }
 }
 /*# sourceMappingURL=ExpenseForm.css.map */

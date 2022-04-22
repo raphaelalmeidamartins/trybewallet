@@ -1,6 +1,5 @@
 .Header {
   background-color: #ffffff;
-  border: 1px solid black;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -8,5 +7,6 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 1rem;
+  width: 100%;
 }
 /*# sourceMappingURL=Header.css.map */

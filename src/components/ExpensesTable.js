@@ -10,7 +10,7 @@ class ExpensesTable extends Component {
     const { expenses, handleDeleteExpense, handleEditExpense } = this.props;
 
     return (
-      <table className="ExpensesTable table">
+      <table className="ExpensesTable table is-fullwidth is-hoverable">
         <thead>
           <tr>
             <th>Description</th>

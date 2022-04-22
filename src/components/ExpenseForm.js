@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-max-depth */
+import 'bulma/css/bulma.min.css';
 import PropTypes from 'prop-types';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
@@ -40,79 +42,108 @@ class ExpenseForm extends Component {
     const { id, value, description, currency, method, tag } = currentExpense;
 
     return (
-      <form className="ExpenseForm">
-        <label htmlFor="value-input">
-          Valor
-          <input
-            id="value-input"
-            data-testid="value-input"
-            type="text"
-            name="value"
-            value={ value }
-            onChange={ handleInputChange }
-          />
-        </label>
-        <label htmlFor="description-input">
-          Descrição
-          <input
-            id="description-input"
-            data-testid="description-input"
-            type="text"
-            name="description"
-            value={ description }
-            onChange={ handleInputChange }
-          />
-        </label>
-        <label htmlFor="currencies">
-          Moeda
-          <select
-            id="currencies"
-            name="currency"
-            data-testid="currency-input"
-            value={ currency }
-            onChange={ handleInputChange }
+      <form className="ExpenseForm box">
+        <div className="field is-grouped">
+          <label htmlFor="value-input" className="label">
+            Valor
+            <div className="control">
+              <input
+                className="input"
+                id="value-input"
+                data-testid="value-input"
+                type="text"
+                name="value"
+                value={ value }
+                onChange={ handleInputChange }
+              />
+            </div>
+          </label>
+          <label htmlFor="currencies" className="label label-currencies">
+            Moeda
+            <div className="control">
+              <div className="select">
+                <select
+                  id="currencies"
+                  name="currency"
+                  data-testid="currency-input"
+                  value={ currency }
+                  onChange={ handleInputChange }
+                >
+                  {currencies.map((curr) => (
+                    <option key={ curr }>{curr}</option>
+                  ))}
+                </select>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div className="field">
+          <label htmlFor="description-input" className="label">
+            Descrição
+            <div className="control">
+              <input
+                className="input"
+                id="description-input"
+                data-testid="description-input"
+                type="text"
+                name="description"
+                value={ description }
+                onChange={ handleInputChange }
+              />
+            </div>
+          </label>
+        </div>
+        <div className="field">
+          <label htmlFor="method-input" className="label">
+            Pagamento
+            <div className="control">
+              <div className="select">
+                <select
+                  id="method-input"
+                  data-testid="method-input"
+                  name="method"
+                  value={ method }
+                  onChange={ handleInputChange }
+                >
+                  <option>Dinheiro</option>
+                  <option>Cartão de crédito</option>
+                  <option>Cartão de débito</option>
+                </select>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div className="field">
+          <label htmlFor="tag" className="label">
+            Categoria
+            <div className="control">
+              <div className="select">
+                <select
+                  id="tag"
+                  data-testid="tag-input"
+                  value={ tag }
+                  name="tag"
+                  onChange={ handleInputChange }
+                >
+                  <option>{Alimentacao}</option>
+                  <option>Lazer</option>
+                  <option>Trabalho</option>
+                  <option>Transporte</option>
+                  <option>Saúde</option>
+                </select>
+              </div>
+            </div>
+          </label>
+        </div>
+        <div className="field">
+          <button
+            className="button is-primary"
+            type="button"
+            onClick={ this.handleSubmit }
           >
-            {currencies.map((curr) => (
-              <option key={ curr }>{curr}</option>
-            ))}
-          </select>
-        </label>
-        <label htmlFor="method-input">
-          Método de pagamento
-          <select
-            id="method-input"
-            data-testid="method-input"
-            name="method"
-            value={ method }
-            onChange={ handleInputChange }
-          >
-            <option>Dinheiro</option>
-            <option>Cartão de crédito</option>
-            <option>Cartão de débito</option>
-          </select>
-        </label>
-        <label htmlFor="tag">
-          Categoria
-          <select
-            id="tag"
-            data-testid="tag-input"
-            value={ tag }
-            name="tag"
-            onChange={ handleInputChange }
-          >
-            <option>{Alimentacao}</option>
-            <option>Lazer</option>
-            <option>Trabalho</option>
-            <option>Transporte</option>
-            <option>Saúde</option>
-          </select>
-        </label>
-        <button
-          type="button"
-          onClick={ this.handleSubmit }
-        >
-          {`${id !== null ? 'Editar' : 'Adicionar'} despesa`}
-        </button>
+            {`${id !== null ? 'Editar' : 'Adicionar'} despesa`}
+          </button>
+        </div>
       </form>
     );
   }

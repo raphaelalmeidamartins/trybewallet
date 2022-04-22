@@ -7,6 +7,7 @@ import ExpensesTable from '../components/ExpensesTable';
 import Header from '../components/Header';
 import { fetchCurriencies, updateTotal } from '../redux/actions';
 import '../sass/pages/Wallet.css';
+import 'bulma/css/bulma.min.css';
 
 class Wallet extends React.Component {
   componentDidMount() {
@@ -18,18 +19,22 @@ class Wallet extends React.Component {
   render() {
     const { email } = this.props;
     return (
-      <main className="Wallet">
-        { email === '' && (
-          <Redirect to="/" />
-        ) }
-        { email !== '' && (
-          <>
-            <Header />
-            <ExpenseForm />
-            <ExpensesTable />
-          </>
-        )}
-      </main>
+      <div className="Wallet-container">
+        <main className="Wallet">
+          { email === '' && (
+            <Redirect to="/" />
+          ) }
+          { email !== '' && (
+            <>
+              <Header />
+              <ExpenseForm />
+              <div className="table-container">
+                <ExpensesTable />
+              </div>
+            </>
+          )}
+        </main>
+      </div>
     );
   }
 }

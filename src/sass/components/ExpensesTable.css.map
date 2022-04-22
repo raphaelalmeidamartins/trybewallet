@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,cAAc,CAAC;EACb,MAAM,EAAE,eAAe;CACxB",
+    "mappings": "",
     "sources": [
         "ExpensesTable.scss"
     ],
