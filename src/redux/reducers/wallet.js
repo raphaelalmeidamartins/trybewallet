@@ -21,7 +21,7 @@ const initialCurrentExpense = {
   description: '',
   currency: 'USD',
   method: 'Dinheiro',
-  tag: 'Alimentação',
+  tag: 'Comida',
 };
 
 const INITIAL_STATE = {

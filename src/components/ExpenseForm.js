@@ -11,7 +11,7 @@ import {
 } from '../redux/actions';
 import '../sass/components/ExpenseForm.css';
 
-const Alimentacao = 'Alimentação';
+const Comida = 'Comida';
 
 class ExpenseForm extends Component {
   constructor() {
@@ -125,7 +125,7 @@ class ExpenseForm extends Component {
                   name="tag"
                   onChange={ handleInputChange }
                 >
-                  <option>{Alimentacao}</option>
+                  <option>{Comida}</option>
                   <option>Lazer</option>
                   <option>Trabalho</option>
                   <option>Transporte</option>
