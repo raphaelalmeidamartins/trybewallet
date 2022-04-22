@@ -8,14 +8,7 @@ React project developed by [Raphael Martins](https://www.linkedin.com/in/raphael
 
 We had to develop a wallet React application using the React Router, Redux and fetching currency exchange rates from a public API.
 
-### Note
-
-This project is still under development. I am implementing the layout, and I will refactor the code. I haven't deployed the application yet.
-
-### In progress
-
-- [ ] Finishing CSS
-- [ ] Adding English translation (the project is currently only available in Brazilian Portuguese)
+[Click here](https://raphaelalmeidamartins.github.io/trybewallet/) to check out the final version of the project on your browser.
 
 ## :man_technologist: Developed Skills
 
@@ -23,6 +16,7 @@ This project is still under development. I am implementing the layout, and I wil
 * React to user interactions by manipulating the components' states and props according to user events
 * Use the React Router library to handle page navigation
 * Use the Redux library to create a global state
+* Use the Redux thunk package to handle asynchronous actions
 
 ## :memo: Methodologies
 
@@ -36,6 +30,7 @@ This project is still under development. I am implementing the layout, and I wil
 * React.js
 * React Icons (icon library)
 * Redux
+* Redux tunk
 * GitHub Pages
 
 ## :trophy: Grade
