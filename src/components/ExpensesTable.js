@@ -92,7 +92,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 ExpensesTable.propTypes = {
-  expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  expenses: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   handleDeleteExpense: PropTypes.func.isRequired,
   handleEditExpense: PropTypes.func.isRequired,
 };

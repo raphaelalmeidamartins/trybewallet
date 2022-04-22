@@ -166,7 +166,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 ExpenseForm.propTypes = {
   currencies: PropTypes.arrayOf(PropTypes.string).isRequired,
-  expenses: PropTypes.arrayOf(PropTypes.object).isRequired,
+  expenses: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.any)).isRequired,
   recordExpense: PropTypes.func.isRequired,
   requestExchangeRatesFromAPI: PropTypes.func.isRequired,
   currentExpense: PropTypes.objectOf(PropTypes.oneOfType([
