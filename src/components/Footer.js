@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
       <footer className="Footer">
         <p>
-          Developed with React by
+          Desenvolvido em React por
           {' '}
           <a href="https://github.com/raphaelalmeidamartins">Raphael Martins</a>
         </p>

@@ -62,7 +62,7 @@ class Login extends React.Component {
           <form>
             <header>
               <img className="Login-logo" src={ logo } alt="TrybeWallet logo" />
-              <p>Sign in</p>
+              <p>Entre</p>
             </header>
             <div className="Login-input-container">
               <input
@@ -71,7 +71,7 @@ class Login extends React.Component {
                 name="email"
                 value={ email }
                 onChange={ this.handleInputChange }
-                placeholder="Username"
+                placeholder="Usuário"
                 onFocus={ () => this.handleFocus('email') }
                 onBlur={ () => this.handleFocus('') }
               />
@@ -86,7 +86,7 @@ class Login extends React.Component {
                 name="password"
                 value={ password }
                 onChange={ this.handleInputChange }
-                placeholder="Password"
+                placeholder="Senha"
                 onFocus={ () => this.handleFocus('password') }
                 onBlur={ () => this.handleFocus('') }
               />
@@ -95,7 +95,7 @@ class Login extends React.Component {
               </span>
             </div>
             <button type="button" disabled={ disabled } onClick={ this.handleSubmit }>
-              LOGIN
+              ENTRAR
             </button>
           </form>
         ) }

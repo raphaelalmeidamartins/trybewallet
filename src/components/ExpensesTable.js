@@ -13,15 +13,15 @@ class ExpensesTable extends Component {
       <table className="ExpensesTable table is-fullwidth is-hoverable">
         <thead>
           <tr>
-            <th>Description</th>
+            <th>Descrição</th>
             <th>Tag</th>
-            <th>Payment method</th>
-            <th>Value</th>
-            <th>Currency</th>
-            <th>Exchange rate</th>
-            <th>Converted value</th>
-            <th>Conversion currency</th>
-            <th>Edit</th>
+            <th>Pagamento</th>
+            <th>Valor</th>
+            <th>Moeda</th>
+            <th>Câmbio</th>
+            <th>Valor convertido</th>
+            <th>Moeda de conversão</th>
+            <th>Editar</th>
           </tr>
         </thead>
         <tbody>
@@ -61,7 +61,7 @@ class ExpensesTable extends Component {
                         tag,
                       }) }
                     >
-                      Edit
+                      Editar
                     </button>
                     <button
                       className="button is-danger is-small"
@@ -69,7 +69,7 @@ class ExpensesTable extends Component {
                       data-testid="delete-btn"
                       onClick={ () => handleDeleteExpense(index) }
                     >
-                      Delete
+                      Excluir
                     </button>
                   </td>
                 </tr>
