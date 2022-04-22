@@ -1,0 +1,37 @@
+.Footer {
+  bottom: 0;
+  color: #ffffff;
+  opacity: 0.5;
+  padding: 2rem;
+  position: fixed;
+  text-align: center;
+}
+
+.Footer a {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.Footer a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 500px) {
+  .Footer {
+    color: black;
+  }
+  .Footer a {
+    color: black;
+  }
+  .Footer a:hover {
+    color: black;
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .Footer {
+    position: relative;
+  }
+}
+/*# sourceMappingURL=Footer.css.map */

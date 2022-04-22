@@ -1,4 +1,7 @@
 .Header {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #ffffff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -8,5 +11,67 @@
           justify-content: space-between;
   padding: 1rem;
   width: 100%;
+}
+
+.Header img {
+  width: 150px;
+}
+
+.Header .Header-user-info {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
+}
+
+.Header .Header-user-info .Header-total-expenses {
+  margin-right: 0.5rem;
+}
+
+.Header .Header-user-info .Header-email {
+  margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 675px) {
+  .Header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+  .Header img {
+    margin-bottom: 1rem;
+  }
+  .Header .Header-user-info {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: 1rem 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .Header .Header-user-info {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    margin: 1rem 0;
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=Header.css.map */

@@ -101,12 +101,19 @@
 @media screen and (max-width: 500px) {
   .Login {
     background: $primary-color;
+
     form {
       background-color: transparent;
       border: 0;
       box-shadow: none;
     }
   }
+}
+
+@media screen and (max-height: 550px) {
+  .Login {
+    flex-flow: column nowrap;
+  }  
 }
 
 @media screen and (max-width: 340px) {

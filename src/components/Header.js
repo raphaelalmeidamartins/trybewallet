@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import { FaUserAlt } from 'react-icons/fa';
 import { connect } from 'react-redux';
+import logo from '../assets/trybe-wallet-logo-converted.svg';
 import '../sass/components/Header.css';
 
 class Header extends Component {
@@ -9,12 +11,18 @@ class Header extends Component {
 
     return (
       <header className="Header">
-        <span data-testid="email-field">{ email }</span>
-        <div>
-          <span data-testid="total-field">
-            {totalExpenses}
-          </span>
-          <span data-testid="header-currency-field">BRL</span>
+        <img src={ logo } alt="Wallet" />
+        <div className="Header-user-info">
+          <div className="Header-user-icon">
+            <FaUserAlt />
+            <span data-testid="email-field" className="Header-email">{ email }</span>
+          </div>
+          <div>
+            <span data-testid="total-field" className="Header-total-expenses">
+              {Number(totalExpenses).toFixed(2)}
+            </span>
+            <span data-testid="header-currency-field">BRL</span>
+          </div>
         </div>
       </header>
     );

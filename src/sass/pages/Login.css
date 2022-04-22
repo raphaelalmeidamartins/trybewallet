@@ -131,6 +131,15 @@
   }
 }
 
+@media screen and (max-height: 550px) {
+  .Login {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+  }
+}
+
 @media screen and (max-width: 340px) {
   .Login form {
     width: 95%;

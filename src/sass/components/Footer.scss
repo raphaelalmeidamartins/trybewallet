@@ -1,0 +1,40 @@
+@import '../abstracts/_colors';
+
+.Footer {
+  bottom: 0;
+  color: $primary-color;
+  opacity: 0.5;
+  padding: 2rem;
+  position: fixed;
+  text-align: center;
+
+  a {
+    color: $primary-color;
+    cursor: pointer;
+
+    &:hover {
+      color: $primary-color;
+      text-decoration: underline;
+    }
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .Footer {
+    color: $text-icons;
+
+    a {
+      color: $text-icons;
+
+      &:hover {
+        color: $text-icons;
+      }
+    }
+  }
+}
+
+@media screen and (max-height: 550px) {
+  .Footer {
+    position: relative;
+  }
+}

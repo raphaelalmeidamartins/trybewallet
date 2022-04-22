@@ -1,9 +1,56 @@
 @import '../abstracts/_colors.scss';
 
 .Header {
+  align-items: center;
   background-color: $primary-color;
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   width: 100%;
+
+  img {
+    width: 150px;
+  }
+
+  .Header-user-info {
+    align-items: flex-end;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .Header-total-expenses {
+      margin-right: 0.5rem;
+    }
+
+    .Header-email {
+      margin-left: 0.5rem;
+    }
+  }
+}
+
+@media screen and (max-width: 675px) {
+  .Header {
+    flex-flow: column nowrap;
+
+    img {
+      margin-bottom: 1rem;
+    }
+
+    .Header-user-info {
+      flex-flow: row wrap;
+      justify-content: space-between;
+      margin: 1rem 0;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .Header {
+    .Header-user-info {
+      align-items: center;
+      flex-flow: column nowrap;
+      margin: 1rem 0;
+      width: 100%;
+    }
+  }
 }

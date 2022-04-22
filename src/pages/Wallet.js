@@ -1,3 +1,4 @@
+import 'bulma/css/bulma.min.css';
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
@@ -7,7 +8,6 @@ import ExpensesTable from '../components/ExpensesTable';
 import Header from '../components/Header';
 import { fetchCurriencies, updateTotal } from '../redux/actions';
 import '../sass/pages/Wallet.css';
-import 'bulma/css/bulma.min.css';
 
 class Wallet extends React.Component {
   componentDidMount() {

@@ -4,6 +4,7 @@ import { FaLock, FaUserAlt } from 'react-icons/fa';
 import { connect } from 'react-redux';
 import { Redirect } from 'react-router-dom';
 import logo from '../assets/trybe-wallet-logo-converted.svg';
+import Footer from '../components/Footer';
 import { userLogin } from '../redux/actions';
 import '../sass/pages/Login.css';
 
@@ -98,6 +99,7 @@ class Login extends React.Component {
             </button>
           </form>
         ) }
+        <Footer />
       </div>
     );
   }
